@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #d3c7c7;
+    color: aquamarine;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+/* ---header--- */
+header{
+    background: red;
+    color: aliceblue;
+    padding: 20px 15px;
+    position: sticky;
+    top: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav h1{
+    font-size: 30px;
+}
+
+nav ul{
+    list-style: circle;
+    display: flexbox;
+    gap: 40px;
+}
+
+.hero{
+    background-color:rgb(64, 207, 64);
+    font-style: italic;
+    padding: 20px; 
+}
+
+section{
+    background-color: blueviolet;
+    font-style: italic;
+    padding: 20px;
+}
+
+ul li{
+    background-color: cadetblue;
+}
+
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.skill-card{
+    background: lightblue;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid darkblue;
+    text-align: center;
+}
+
+.skill-card:hover{
+    transform: scale(1);
+    box-shadow:0px 8px 20px rgba(0, 0, 0, 0.2);
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(1);
+    gap: 20px;
+}
+.project-card{
+    background: lightblue;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid darkblue;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 16px;
+    border: none;
+    background: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgb(255, 109, 133);
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
