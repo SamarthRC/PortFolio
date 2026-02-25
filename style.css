@@ -1,3 +1,14 @@
+/* Custom Properties for easy editing */
+:root {
+    --primary: #2d3436;
+    --accent: #0984e3;
+    --bg-light: #f5f6fa;
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+    --white: #ffffff;
+    --transition: all 0.3s ease-in-out;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,120 +16,141 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #d3c7c7;
-    color: brown;
-    padding: 20px;
-    line-height: 1.5;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg-light);
+    color: var(--text-main);
+    padding: 0; /* Changed to 0; use sections for padding */
+    line-height: 1.6;
 }
 
-/* ---header--- */
-header{
-    background:rgb(35, 175, 183);
-    color: aliceblue;
-    padding: 20px 15px;
+/* --- Header & Nav --- */
+header {
+    background: var(--white);
+    color: var(--primary);
+    padding: 1rem 5%;
     position: sticky;
     top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-nav h1{
-    font-size: 30px;
+nav h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
 }
 
-nav ul{
-    list-style:circle;
-    display: flexbox;
-    gap: 40px;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }
 
-.hero{
-    background-color:rgb(64, 207, 64);
-    font-style: italic;
-    padding: 20px; 
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+    padding: 80px 20px;
     text-align: center;
+    clip-path: ellipse(150% 100% at 50% 0%); /* Subtle curve */
 }
 
-section{
-    background-color: orange;
-    font-style: italic;
-    padding: 20px;
-    text-align: center;
+/* --- Layout Sections --- */
+section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px 20px;
 }
 
-ul li{
-    background-color: cadetblue;
-}
-
-.skills-grid{
+/* --- Cards & Grids --- */
+.skills-grid, .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
 }
 
-.skill-card{
-    background: lightblue;
-    padding: 20px;
-    border-radius: 8px;
+.skill-card, .project-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: var(--transition);
     text-align: center;
-    border: 2px solid darkblue;
-    text-align: center;
 }
 
-.skill-card:hover{
-    transform: scale(1);
-    box-shadow:0px 8px 20px rgba(0, 0, 0, 0.2);
-
-.projects-grid{
-    display: grid;
-    grid-template-columns: repeat(1);
-    gap: 20px;
+/* Smooth Transitions & Hover Effects */
+.skill-card:hover, .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: var(--accent);
 }
-.project-card{
-    background: lightblue;
-    padding: 20px;
-    border-radius: 8px;
-    border: 2px solid darkblue;
+
+/* --- Forms & Buttons --- */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
 }
 
 form input {
     width: 100%;
-    padding: 12px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 2px solid black;
-    border-radius: 6px;
+    padding: 12px 15px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: var(--transition);
+}
+
+form input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(9, 132, 227, 0.1);
 }
 
 button {
     width: 100%;
-    padding: 12px;
-    border-radius: 16px;
+    padding: 14px;
+    border-radius: 8px;
     border: none;
-    background: black;
+    background: var(--primary);
     color: white;
-    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
+    transition: var(--transition);
 }
 
 button:hover {
-    background: rgb(255, 109, 133);
+    background: var(--accent);
+    transform: translateY(-2px);
 }
 
-/* FOOTER */
+/* --- Footer --- */
 footer {
-    background: black;
-    color: white;
-    padding: 20px;
+    background: var(--primary);
+    color: rgba(255,255,255,0.7);
+    padding: 40px 20px;
     text-align: center;
-}
-
-h1,p{
-    text-align: center;
+    margin-top: 60px;
 }
