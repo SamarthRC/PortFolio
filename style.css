@@ -7,14 +7,14 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #d3c7c7;
-    color: aquamarine;
+    color: brown;
     padding: 20px;
     line-height: 1.5;
 }
 
 /* ---header--- */
 header{
-    background: red;
+    background:rgb(35, 175, 183);
     color: aliceblue;
     padding: 20px 15px;
     position: sticky;
@@ -33,7 +33,7 @@ nav h1{
 }
 
 nav ul{
-    list-style: circle;
+    list-style:circle;
     display: flexbox;
     gap: 40px;
 }
@@ -42,12 +42,14 @@ nav ul{
     background-color:rgb(64, 207, 64);
     font-style: italic;
     padding: 20px; 
+    text-align: center;
 }
 
 section{
-    background-color: blueviolet;
+    background-color: orange;
     font-style: italic;
     padding: 20px;
+    text-align: center;
 }
 
 ul li{
@@ -114,5 +116,9 @@ footer {
     background: black;
     color: white;
     padding: 20px;
+    text-align: center;
+}
+
+h1,p{
     text-align: center;
 }
